@@ -32,8 +32,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 mainClassName='jacocoGradle.Library'
+test{
+testLogging{
+exceptionFormat = 'full'
+events = ["passed", "failed", "skipped"]
+}
+finalizedBy jacocoTestReport
+}
 jacocoTestReport {
-group="build"
+group = "build"
     reports {
         xml.enabled false
         csv.enabled false
