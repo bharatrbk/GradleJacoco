@@ -11,7 +11,7 @@ plugins {
     id 'java-library'
     id 'jacoco'
     id 'application'
-    id 'org.sonarqube'
+    id "org.sonarqube" version "2.7.1"
     
 }
 
