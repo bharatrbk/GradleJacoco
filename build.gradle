@@ -20,6 +20,13 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
+test{
+testLogging {
+exceptionFormat = 'full'
+events = ["passed", "failed", "skipped"]
+}
+finalizedBy jacocoTestReport
+}
 
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
